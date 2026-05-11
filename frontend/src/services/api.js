@@ -1,42 +1,55 @@
-// import axios from "axios";
-
-// const API = axios.create({
-//   baseURL: "http://localhost:5000/api",
-// });
-
-// export default API;
-
 import axios from "axios";
 
+// ✅ DEPLOYMENT SAFE BASE URL
+const BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  "http://localhost:5000/api";
+
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: BASE_URL,
 });
 
-// ✅ AUTOMATIC TOKEN ATTACH (VERY IMPORTANT)
+// ✅ AUTO TOKEN ATTACH
 API.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem("token");
+
+    const token =
+      localStorage.getItem("token");
 
     if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
+
+      config.headers.Authorization =
+        `Bearer ${token}`;
     }
 
     return config;
   },
-  (error) => Promise.reject(error)
+
+  (error) =>
+    Promise.reject(error)
 );
 
-// ✅ OPTIONAL: HANDLE GLOBAL 401 (AUTO LOGOUT)
+// ✅ AUTO HANDLE SESSION EXPIRE
 API.interceptors.response.use(
+
   (response) => response,
+
   (error) => {
-    if (error.response?.status === 401) {
-      console.log("Session expired");
 
-      localStorage.removeItem("token");
-      localStorage.removeItem("user");
+    if (
+      error.response?.status === 401
+    ) {
 
-      window.location.href = "/login";
+      localStorage.removeItem(
+        "token"
+      );
+
+      localStorage.removeItem(
+        "user"
+      );
+
+      window.location.href =
+        "/login";
     }
 
     return Promise.reject(error);

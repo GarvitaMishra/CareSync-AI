@@ -67,7 +67,19 @@ export default function Login() {
       
       {/* 🔥 CARD */}
       <div style={card}>
-        <h2 style={{ marginBottom: "20px" }}>Welcome Back 👋</h2>
+        <h2 style={{ marginBottom: "10px" }}>
+          Welcome Back 👋
+        </h2>
+
+        <p
+          style={{
+            color: "#666",
+            marginBottom: "25px",
+            fontSize: "14px"
+          }}
+        >
+          Login to CareSync AI
+        </p>
 
         <input
           style={input}

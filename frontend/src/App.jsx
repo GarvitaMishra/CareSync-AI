@@ -39,7 +39,7 @@ const LoadingScreen = () => {
       <div style={loader}></div>
 
       <h2 style={loadingText}>
-        MediCompare
+        CareSync AI
       </h2>
 
     </div>

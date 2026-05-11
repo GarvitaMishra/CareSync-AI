@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "AI-powered healthcare platform backend with bookings, analytics, payments, refunds, authentication, and hospital management.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

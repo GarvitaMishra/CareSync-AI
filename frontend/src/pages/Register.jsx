@@ -32,7 +32,19 @@ export default function Register() {
       
       {/* 🔥 CARD */}
       <div style={card}>
-        <h2 style={{ marginBottom: "20px" }}>Create Account ✨</h2>
+        <h2 style={{ marginBottom: "10px" }}>
+          Create Account ✨
+        </h2>
+
+        <p
+          style={{
+            color: "#666",
+            marginBottom: "25px",
+            fontSize: "14px"
+          }}
+        >
+          Join CareSync AI
+        </p>
 
         <input
           style={input}

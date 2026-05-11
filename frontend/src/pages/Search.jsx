@@ -137,7 +137,7 @@ export default function Search() {
 
         currency: "INR",
 
-        name: "MediCompare",
+        name: "CareSync AI",
 
         description: service.name,
 
@@ -238,7 +238,7 @@ export default function Search() {
         <div>
 
           <h1 style={logo}>
-            MediCompare
+            CareSync AI
           </h1>
 
           <p style={logoSub}>

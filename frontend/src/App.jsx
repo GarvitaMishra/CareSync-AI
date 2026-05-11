@@ -1,5 +1,5 @@
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
   Navigate
@@ -113,7 +113,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
 
       <Routes>
 
@@ -181,7 +181,7 @@ function App() {
       {/* GLOBAL CHATBOT */}
       <Chatbot />
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

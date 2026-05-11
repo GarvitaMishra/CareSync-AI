@@ -10,13 +10,7 @@ const app = express();
 app.use(
   cors({
 
-    origin: [
-
-      "http://localhost:5173",
-
-      // ✅ ADD YOUR FRONTEND DEPLOY URL LATER
-      process.env.CLIENT_URL
-    ],
+    origin: process.env.CLIENT_URL,
 
     credentials: true
   })
